@@ -1,0 +1,59 @@
+#slider_container {
+    display: flex;
+    gap: 2rem;
+}
+
+#slider_container .slider_card {
+    border-radius: 2rem;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: white;
+    width: 50rem;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+#slider_container .slider_card .slider_img {
+    height: 33rem;
+    width: 30rem;
+    background-color: black;
+    border-radius: 2rem;
+    transition: 0.5s ease-in-out;
+}
+
+#slider_container .slider_card .slider_name{
+    transform: rotate(270deg);
+    font-size: 5rem;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    position: absolute;
+    top: 5rem;
+}
+
+#slider_container .slider_card .slider_details {
+    opacity: 0;
+    font-size: 1.5rem;
+}
+
+#slider_container .slider_card .slider_details .information {
+    font-size: 1rem;
+}
+
+#slider_container .slider_card.clicked {
+    width: 30rem;
+}
+#slider_container .slider_card.clicked .slider_name {
+    opacity: 0;
+    top: 50rem;
+}
+
+#slider_container .slider_card.clicked .slider_details{
+    opacity: 1;
+    position: absolute;
+    width: 17rem;
+    bottom: 12rem;
+    left: 2rem;
+    transition: 0.5s ease;
+}
