@@ -10,8 +10,21 @@
     flex-direction: row;
     justify-content: flex-start;
     color: white;
-    width: 50rem;
+    width: 10rem;
     overflow: hidden;
+    transition: 0.5s ease-in-out;
+    box-shadow: 2px 2px 2px 2px #00000025;
+}
+
+#slider_container .slider_card .black_film{
+    position: absolute;
+    width: 10rem;
+    height: 33rem;
+    border-radius: 2rem;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 0;
+    display: block;
     transition: 0.5s ease-in-out;
 }
 
@@ -21,6 +34,7 @@
     background-color: black;
     border-radius: 2rem;
     transition: 0.5s ease-in-out;
+    transition-delay: 0.25s;
 }
 
 #slider_container .slider_card .slider_name{
@@ -44,6 +58,19 @@
 #slider_container .slider_card.clicked {
     width: 30rem;
 }
+
+#slider_container .slider_card.clicked .black_film{
+    position: absolute;
+    width: 30rem;
+    height: 33rem;
+    border-radius: 2rem;
+    background-color: black;
+    opacity: 0;
+    z-index: 0;
+    display: block;
+    transition: 0.5s ease-in-out;
+}
+
 #slider_container .slider_card.clicked .slider_name {
     opacity: 0;
     top: 50rem;
@@ -53,7 +80,6 @@
     opacity: 1;
     position: absolute;
     width: 17rem;
-    bottom: 12rem;
-    left: 2rem;
+    padding: 20rem 2rem 2rem 2rem;
     transition: 0.5s ease;
 }
